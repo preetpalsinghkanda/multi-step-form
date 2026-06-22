@@ -4,6 +4,8 @@ import Input from "./main/step1/Input";
 import Button from "./main/Button";
 import StepHeading from "./main/StepHeading";
 import AllInputs from "./main/step1/AllInputs.jsx";
+import Plan from "./main/step2/Plan.jsx";
+import FullPlan from "./main/step2/FullPlan.jsx";
 
 const Hero = () => {
   return (
@@ -13,10 +15,18 @@ const Hero = () => {
       <div className=" flex flex-col justify-between">
         <div>
           <div>
-            <StepHeading />
+            <StepHeading
+              headingName={"Personal info"}
+              headingPara={
+                "Please provide your name, email address, and phone number."
+              }
+            />
           </div>
 
-          <AllInputs/>
+          {/* <AllInputs /> */}
+          <FullPlan/>
+      
+
         </div>
 
         <Button btnName={"Next Step"} />
