@@ -9,7 +9,7 @@ import FullPlan from "./main/step2/FullPlan.jsx";
 
 const Hero = () => {
   return (
-    <div className=" flex p-4 gap-25 rounded-xl bg-white max-w-4xl mx-auto w-full">
+    <div className=" flex p-4 gap-25  rounded-xl bg-white max-w-4xl mx-auto w-full">
       <SideBar />
 
       <div className=" flex flex-col justify-between">
@@ -24,12 +24,10 @@ const Hero = () => {
           </div>
 
           {/* <AllInputs /> */}
-          <FullPlan/>
-      
-
+          <FullPlan />
         </div>
 
-        <Button btnName={"Next Step"} />
+        <div className=" flex items-center justify-between"><Button btnName={"Go Back"} btnBgColor={""} btnTextColor={"text-[hsl(235,5%,61%)]"}/><Button btnName={"Next Step"} btnBgColor={"bg-[hsl(213,96%,18%)]"} btnTextColor={"text-white"} /></div>
       </div>
     </div>
   );
