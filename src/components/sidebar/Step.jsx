@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import MultiFormContext from '../../context/Context'
 
 const Step = ({stepNo , stepName}) => {
+  const {step } = useContext(MultiFormContext)
   return (
     <div className="flex gap-4 items-center">
-        <span className=" bg-[hsl(206,94%,87%)] text-sm font-bold h-9 w-9 rounded-full flex items-center justify-center">
+        <span className={` ${Number(stepNo) === step ? "bg-[hsl(206,94%,87%)] hsl(213, 96%, 18%)" : "border-[#ffffff8b] border-2 text-white"}  text-[16px]  font-[600] h-9 w-9 rounded-full flex items-center justify-center`}>
           {stepNo}
         </span>
         <div className="leading-5">
