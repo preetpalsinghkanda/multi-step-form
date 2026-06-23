@@ -6,6 +6,7 @@ import StepHeading from "./main/StepHeading";
 import AllInputs from "./main/step1/AllInputs.jsx";
 import Plan from "./main/step2/Plan.jsx";
 import FullPlan from "./main/step2/FullPlan.jsx";
+import AllAddOns from "./main/step3/AllAddOns.jsx";
 
 const Hero = () => {
   return (
@@ -24,7 +25,10 @@ const Hero = () => {
           </div>
 
           {/* <AllInputs /> */}
-          <FullPlan />
+          {/* <FullPlan /> */}
+          <AllAddOns/>
+
+
         </div>
 
         <div className=" flex items-center justify-between"><Button btnName={"Go Back"} btnBgColor={""} btnTextColor={"text-[hsl(235,5%,61%)]"}/><Button btnName={"Next Step"} btnBgColor={"bg-[hsl(213,96%,18%)]"} btnTextColor={"text-white"} /></div>
