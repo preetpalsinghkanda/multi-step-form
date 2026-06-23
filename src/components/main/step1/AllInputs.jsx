@@ -11,6 +11,7 @@ const AllInputs = () => {
         inputValue={name}
         type={"text"}
         inputName={"Name"}
+        id={"name"}
         inputPlaceHolder={"e.g. Stephen King"}
       />
       <Input
@@ -18,6 +19,7 @@ const AllInputs = () => {
         inputValue={email}
         type={"text"}
         inputName={"Email Address"}
+        id={"email"}
         inputPlaceHolder={"e.g. stephenking@lorem.com"}
       />
 
@@ -25,6 +27,7 @@ const AllInputs = () => {
       change={setPhoneNo}
       inputValue={phoneNo}
         type={"tel"}
+        id={"phoneNo"}
         inputName={"Phone Number"}
         inputPlaceHolder={"e.g. +1 234 567 890"}
       />
