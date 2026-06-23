@@ -58,6 +58,16 @@ const ContextProvider = ({ children }) => {
     return allInputFilled;
   }
 
+  // step 3
+
+  const [checked, setChecked] = useState({
+    online: false,
+    larger: false,
+    customize: false,
+  });
+
+
+
   function handleNextBtn() {
     if (step === 1) {
       if (!handleStepOne()) return;
@@ -84,6 +94,8 @@ const ContextProvider = ({ children }) => {
         setMonthlyPlan,
         plan,
         setPlan,
+        checked , 
+        setChecked,
       }}
     >
       {children}
