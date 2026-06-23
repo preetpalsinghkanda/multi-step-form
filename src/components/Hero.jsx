@@ -7,6 +7,7 @@ import AllInputs from "./main/step1/AllInputs.jsx";
 import Plan from "./main/step2/Plan.jsx";
 import FullPlan from "./main/step2/FullPlan.jsx";
 import AllAddOns from "./main/step3/AllAddOns.jsx";
+import Summary from "./main/step4/Summary.jsx";
 
 const Hero = () => {
   return (
@@ -26,7 +27,8 @@ const Hero = () => {
 
           {/* <AllInputs /> */}
           {/* <FullPlan /> */}
-          <AllAddOns/>
+          {/* <AllAddOns/> */}
+          <Summary/>
 
 
         </div>
