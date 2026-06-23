@@ -10,9 +10,8 @@ const Button = ({ btnName, btnBgColor, btnTextColor, btnPx, btnNext }) => {
         if (step >= 1 && step < 5) {
           setStep(step + (btnNext === "next" ? 1 : -1));
         }
-       
       }}
-      className={`${btnBgColor}   font-[500] cursor-pointer my-4 w-fit ${btnTextColor} rounded-lg ${btnPx}  py-3 self-end`}
+      className={`${btnBgColor}  ${btnNext === "next" ? "hover:bg-[#174A8A]" : ""}    font-[500] cursor-pointer my-4 w-fit ${btnTextColor} rounded-lg ${btnPx}  py-3 self-end`}
     >
       {btnName}
     </button>
