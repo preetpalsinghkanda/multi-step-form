@@ -9,6 +9,7 @@ import FullPlan from "./main/step2/FullPlan.jsx";
 import AllAddOns from "./main/step3/AllAddOns.jsx";
 import Summary from "./main/step4/Summary.jsx";
 import MultiFormContext from "../context/Context.js";
+import Thankyou from "./main/step5/Thankyou.jsx";
 
 const Hero = () => {
   const { step, setStep } = useContext(MultiFormContext);
@@ -16,8 +17,8 @@ const Hero = () => {
     <div className=" flex p-4 gap-25  rounded-xl bg-white max-w-4xl mx-auto w-full">
       <SideBar />
 
-      <div className=" flex flex-col border w-full mr-14 justify-between">
-        <div>
+      <div className=" flex flex-col  w-full mr-14 justify-between">
+        {/* <div>
           <div className="">
             {step === 1 && (
               <StepHeading
@@ -55,13 +56,12 @@ const Hero = () => {
             
           </div>
 
-          {/* <AllInputs /> */}
-          {/* <FullPlan /> */}
-          {/* <AllAddOns/> */}
-          {/* <Summary/> */}
-        </div>
+        
 
-        <div className={` flex items-center justify-between`}>
+          
+        </div> */}
+
+        {/* <div className={` flex items-center justify-between`}>
           {step !== 1 ? (
             <Button
               btnName={"Go Back"}
@@ -81,7 +81,9 @@ const Hero = () => {
             btnPx={"px-6"}
             btnNext={"next"}
           />
-        </div>
+        </div> */}
+
+        <Thankyou/>
       </div>
 
     </div>
