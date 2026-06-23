@@ -9,11 +9,11 @@ const Button = ({ btnName, btnBgColor, btnTextColor, btnPx, btnNext }) => {
       onClick={() => {
         if (btnNext === "next") {
           handleNextBtn();
-        }else{
-          setStep((back)=> back - 1);
+        } else {
+          setStep((back) => back - 1);
         }
       }}
-      className={`${btnBgColor}  ${btnNext === "next" ? "hover:bg-[#174A8A]" : ""}    font-[500] cursor-pointer my-4 w-fit ${btnTextColor} rounded-lg ${btnPx}  py-3 self-end`}
+      className={`${btnBgColor}  ${btnNext === "next" ? "hover:bg-[#174A8A]" : "hover:text-[#02295A]"}    font-[600] cursor-pointer my-4 w-fit ${btnTextColor} rounded-lg ${btnPx}  py-3 self-end`}
     >
       {btnName}
     </button>

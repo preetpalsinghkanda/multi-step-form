@@ -2,8 +2,7 @@ import MultiFormContext from "./Context";
 import React, { useState } from "react";
 
 const ContextProvider = ({ children }) => {
-  const [step, setStep] = useState(1);
-
+  const [step, setStep] = useState(2);
   // step 1
 
   const [name, setName] = useState("");
@@ -15,6 +14,12 @@ const ContextProvider = ({ children }) => {
     email: "",
     phoneNo: "",
   });
+
+  //step 2
+
+  const [monthlyPlan, setMonthlyPlan] = useState(true);
+
+  const [plan, setPlan] = useState("arcade");
 
   function handleStepOne() {
     let tempErr = {
@@ -75,6 +80,10 @@ const ContextProvider = ({ children }) => {
         err,
         handleStepOne,
         handleNextBtn,
+        monthlyPlan,
+        setMonthlyPlan,
+        plan,
+        setPlan,
       }}
     >
       {children}
