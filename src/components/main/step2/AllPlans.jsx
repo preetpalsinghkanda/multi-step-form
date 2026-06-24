@@ -8,7 +8,7 @@ import MultiFormContext from "../../../context/Context";
 const AllPlans = () => {
   const { monthlyPlan } = useContext(MultiFormContext);
   return (
-    <section className=" grid grid-cols-3 gap-4">
+    <section className=" grid grid-cols-1 md:grid-cols-3 gap-4">
       <Plan
         planImg={arcadeIcon}
         planName={"Arcade"}

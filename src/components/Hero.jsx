@@ -16,9 +16,9 @@ const Hero = () => {
   return (
     <>
       <div className="md:hidden block">
-        <SideBar />{" "}
+        <SideBar />
       </div>
-      <div className=" flex p-4 md:gap-12 z-10 md:mt-0 mt-18 lg:gap-25 md:flex-row flex-col     rounded-xl bg-white max-w-4xl mx-auto w-full">
+      <div className=" flex p-4 mt-25 mb-25 px-6 md:px-4 md:gap-12 z-10   lg:gap-25 md:flex-row flex-col     rounded-xl bg-white max-w-4xl mx-auto w-full"> 
         <div className="md:block hidden">
           <SideBar />
         </div>
@@ -83,7 +83,9 @@ const Hero = () => {
                   )}
                 </div>
               </div>
-              <div className={` flex items-center justify-between`}>
+              <div
+                className={`hidden   bottom-0  md:flex items-center justify-between`}
+              >
                 {step !== 1 ? (
                   <Button
                     btnName={"Go Back"}
@@ -107,6 +109,29 @@ const Hero = () => {
             </>
           )}
         </div>
+      </div>
+      <div
+        className={`flex  fixed z-10 left-0 px-5 bottom-0  bg-white w-full   md:hidden items-center justify-between`}
+      >
+        {step !== 1 ? (
+          <Button
+            btnName={"Go Back"}
+            btnBgColor={""}
+            btnTextColor={"text-[hsl(235,5%,61%)]"}
+            btnPx={"px-0"}
+            btnNext={"back"}
+          />
+        ) : (
+          <div></div>
+        )}
+
+        <Button
+          btnName={"Next Step"}
+          btnBgColor={"bg-[hsl(213,96%,18%)]"}
+          btnTextColor={"text-white"}
+          btnPx={"px-6"}
+          btnNext={"next"}
+        />
       </div>
     </>
   );

@@ -9,7 +9,7 @@ const Plan = ({ planImg, planName, planPrice, id }) => {
       onClick={() => {
         setPlan(id);
       }}
-      className={`border-2  cursor-pointer ${plan === id ? "border-[hsl(243,100%,62%)] bg-[hsl(250,100%,99%)]" : "border-[#8080803c]"}    py-3.5 px-4 flex flex-col gap-9.5 rounded-lg`}
+      className={`border-2 flex-row cursor-pointer ${plan === id ? "border-[hsl(243,100%,62%)] bg-[hsl(250,100%,99%)]" : "border-[#8080803c]"} md:items-start  items-center  py-3.5 px-4 flex md:flex-col md:gap-9.5 gap-5 rounded-lg`}
     >
       <div>
         <img src={planImg} alt="" />

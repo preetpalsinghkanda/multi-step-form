@@ -2,7 +2,7 @@ import MultiFormContext from "./Context";
 import React, { useState } from "react";
 
 const ContextProvider = ({ children }) => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
   // step 1
 
   const [name, setName] = useState("");
