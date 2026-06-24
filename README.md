@@ -24,6 +24,7 @@ a responsive multi step form made with react js. the project is designed to prov
 ## Screenshot
 
 
+<img width="1776" height="986" alt="Screenshot 2026-06-24 172021" src="https://github.com/user-attachments/assets/5e8e6a9e-b126-4ab7-a791-8878a5c6f94f" />
 
 
 
