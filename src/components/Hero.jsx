@@ -14,10 +14,10 @@ import Thankyou from "./main/step5/Thankyou.jsx";
 const Hero = () => {
   const { step, setStep } = useContext(MultiFormContext);
   return (
-    <div className=" flex p-4 gap-25  rounded-xl bg-white max-w-4xl mx-auto w-full">
+    <div className=" flex p-4 gap-25 md:flex-row flex-col     rounded-xl bg-white max-w-4xl mx-auto w-full">
       <SideBar />
 
-      <div className=" flex flex-col  w-full mr-14 justify-between">
+      <div className=" flex flex-col   w-full mr-14 justify-between">
         {step === 5 ? (
           <Thankyou />
         ) : (

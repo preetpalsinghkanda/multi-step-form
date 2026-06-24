@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 
 const App = () => {
   return (
-    <div className="h-screen flex items-center ">
+    <div className="h-[96vh] flex items-center ">
       <Hero />
     </div>
   );
