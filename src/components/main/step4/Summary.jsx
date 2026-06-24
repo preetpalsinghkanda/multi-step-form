@@ -74,7 +74,7 @@ const Summary = () => {
       <div className="rounded-lg bg-[#f9f7fda9] px-5 py-4">
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
-            <span className="text-[hsl(213,96%,18%)] text-lg font-[600]">
+            <span className="text-[hsl(213,96%,18%)] sm:text-lg text-md font-[600]">
               {plan}({monthlyPlan ? "Monthly" : "Yearly"})
             </span>
             <button
@@ -83,12 +83,12 @@ const Summary = () => {
                 textDecoration: "underline",
                 textDecorationThickness: "2px",
               }}
-              className="border-0 cursor-pointer font-[500] text-[#0000005d] w-fit text-sm"
+              className="border-0 hover:text-[#938CFF] cursor-pointer font-[500] text-[#0000005d] w-fit text-sm"
             >
               Change
             </button>
           </div>
-          <p className="text-lg font-[600] text-[hsl(213,96%,18%)]">
+          <p className="sm:text-lg text-md font-[600] text-[hsl(213,96%,18%)]">
             ${PlanPricing[validity][plan]}/{monthlyPlan ? "mo" : "yr"}
           </p>
         </div>
@@ -98,8 +98,10 @@ const Summary = () => {
           {service.map((item) => {
             return (
               <div className="flex justify-between">
-                <p className="text-[#0000005d]">{item.name}</p>
-                <p className="text-[hsl(213,96%,18%)] font-[500]">
+                <p className="text-[#0000005d] sm:text-md text-[15px]">
+                  {item.name}
+                </p>
+                <p className="text-[hsl(213,96%,18%)] sm:text-md text-sm font-[500]">
                   +${item.price}/{monthlyPlan ? "mo" : "yr"}
                 </p>
               </div>
@@ -112,7 +114,7 @@ const Summary = () => {
         <p className="text-[#00000078]">
           Total (per {monthlyPlan ? "month" : "year"})
         </p>
-        <p className="text-xl text-[#483EFF] font-[600]">
+        <p className="sm:text-xl text-lg text-[#483EFF] font-[600]">
           +${finalPrice}/{monthlyPlan ? "mo" : "yr"}
         </p>
       </div>

@@ -5,7 +5,7 @@ import MultiFormContext from "../../../context/Context";
 const AllAddOns = () => {
   const { monthlyPlan, checked } = useContext(MultiFormContext);
   return (
-    <div className="flex  flex-col gap-4">
+    <div className="flex  flex-col md:gap-4 gap-3">
       <AddOn
         name={"online"}
         addOnName={"Online service"}

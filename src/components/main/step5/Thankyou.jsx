@@ -3,8 +3,8 @@ import thankyouTick from "../../../assets/icon-thank-you.svg";
 
 const Thankyou = () => {
   return (
-    <div className="gap-7 flex flex-col h-full justify-center items-center">
-      <img src={thankyouTick} alt="" />
+    <div className="gap-7 md:py-0 py-10 flex flex-col h-full justify-center items-center">
+      <img src={thankyouTick} alt="" className="h-18 sm:h-auto" />
       <div className="flex items-center flex-col text-center gap-4">
         <h5 className="text-3xl font-[600] text-[hsl(213,96%,18%)]">Thank you!</h5>
         <p className="font-[500] text-[hsl(231,11%,63%)]">

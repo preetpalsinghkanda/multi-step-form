@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="md:hidden block">
         <SideBar />
       </div>
-      <div className=" flex p-4 mt-25 mb-25 px-6 md:px-4 md:gap-12 z-10   lg:gap-25 md:flex-row flex-col     rounded-xl bg-white max-w-4xl mx-auto w-full"> 
+      <div className=" flex p-4 mt-25 mb-25 px-6 md:px-4 md:gap-12 z-10   lg:gap-25 md:flex-row flex-col     rounded-xl bg-white max-w-4xl mx-auto w-full">
         <div className="md:block hidden">
           <SideBar />
         </div>
@@ -83,6 +83,7 @@ const Hero = () => {
                   )}
                 </div>
               </div>
+
               <div
                 className={`hidden   bottom-0  md:flex items-center justify-between`}
               >
@@ -93,46 +94,74 @@ const Hero = () => {
                     btnTextColor={"text-[hsl(235,5%,61%)]"}
                     btnPx={"px-0"}
                     btnNext={"back"}
+                    btnHoverColor={"hover:text-[#02295A]"}
                   />
                 ) : (
                   <div></div>
                 )}
 
-                <Button
-                  btnName={"Next Step"}
-                  btnBgColor={"bg-[hsl(213,96%,18%)]"}
-                  btnTextColor={"text-white"}
-                  btnPx={"px-6"}
-                  btnNext={"next"}
-                />
+                {step === 4 ? (
+                  <Button
+                    btnName={"Confirm"}
+                    btnBgColor={"bg-[#483EFF]"}
+                    btnTextColor={"text-white"}
+                    btnNext={"next"}
+                    btnHoverColor={"hover:bg-[#928CFF] hover:text-white"}
+                    btnPx={"px-6"}
+                  />
+                ) : (
+                  <Button
+                    btnName={"Next Step"}
+                    btnBgColor={"bg-[hsl(213,96%,18%)]"}
+                    btnTextColor={"text-white"}
+                    btnPx={"px-6"}
+                    btnNext={"next"}
+                    btnHoverColor={"hover:bg-[#174A8A] hover:text-white"}
+                  />
+                )}
               </div>
             </>
           )}
         </div>
       </div>
-      <div
-        className={`flex  fixed z-10 left-0 px-5 bottom-0  bg-white w-full   md:hidden items-center justify-between`}
-      >
-        {step !== 1 ? (
-          <Button
-            btnName={"Go Back"}
-            btnBgColor={""}
-            btnTextColor={"text-[hsl(235,5%,61%)]"}
-            btnPx={"px-0"}
-            btnNext={"back"}
-          />
-        ) : (
-          <div></div>
-        )}
+      {step != 5 && (
+        <div
+          className={`flex  fixed z-10 left-0 px-5 bottom-0  bg-white w-full   md:hidden items-center justify-between`}
+        >
+          {step !== 1 ? (
+            <Button
+              btnName={"Go Back"}
+              btnBgColor={""}
+              btnTextColor={"text-[hsl(235,5%,61%)]"}
+              btnPx={"px-0"}
+              btnHoverColor={"hover:text-[#02295A]"}
+              btnNext={"back"}
+            />
+          ) : (
+            <div></div>
+          )}
 
-        <Button
-          btnName={"Next Step"}
-          btnBgColor={"bg-[hsl(213,96%,18%)]"}
-          btnTextColor={"text-white"}
-          btnPx={"px-6"}
-          btnNext={"next"}
-        />
-      </div>
+          {step === 4 ? (
+            <Button
+              btnName={"Confirm"}
+              btnBgColor={"bg-[#483EFF]"}
+              btnTextColor={"text-white"}
+              btnNext={"next"}
+              btnHoverColor={"hover:bg-[#928CFF] hover:text-white"}
+              btnPx={"px-6"}
+            />
+          ) : (
+            <Button
+              btnName={"Next Step"}
+              btnBgColor={"bg-[hsl(213,96%,18%)]"}
+              btnTextColor={"text-white"}
+              btnPx={"px-6"}
+              btnNext={"next"}
+              btnHoverColor={"hover:bg-[#174A8A]"}
+            />
+          )}
+        </div>
+      )}
     </>
   );
 };
